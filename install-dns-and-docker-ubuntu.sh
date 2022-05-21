@@ -25,7 +25,7 @@ sudo usermod -aG docker $USER
 sudo systemctl enable docker
 
 # 4. Install rancher in single node docker
-while getopts f: flag
+while getopts r: flag
 do
     case "${flag}" in
         r) rancher=${OPTARG};;
