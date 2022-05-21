@@ -32,7 +32,7 @@ do
     esac
 done
 echo "Install rancher: $rancher";
-if [ $rancher -eq  true ]
+if [ $rancher ]
 then
   docker run -d --restart=unless-stopped -p 80:80 -p 443:443 --privileged rancher/rancher:latest
 fi
