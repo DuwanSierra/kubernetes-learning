@@ -1,6 +1,6 @@
 #!/bin/bash
 #This base is take from repo https://gist.github.com/fredhsu/f3d927d765727181767b3b13a3a23704
-# Download and Run : wget -O - https://raw.githubusercontent.com/DuwanSierra/kubernetes-learning/main/install-dns-and-docker-ubuntu.sh | bash
+# Download, Run, install Docker and run Rancher Server : wget -O - https://raw.githubusercontent.com/DuwanSierra/kubernetes-learning/main/install-dns-and-docker-ubuntu.sh | bash /dev/stdin -r true
 # 1. Install avahi-daemon
 sudo apt-get update -y
 sudo apt-get install -y avahi-daemon
