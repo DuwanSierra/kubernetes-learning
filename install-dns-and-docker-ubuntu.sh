@@ -17,8 +17,10 @@ sudo docker run hello-world
 sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo systemctl enable docker
+# 4. Install nfs utils and nfs common
 sudo apt install -y libnfs-utils
-
+sudo apt-get install -y nfs-common
+# 5. Install iscs
 sudo apt-get install -y open-iscsi lsscsi sg3-utils multipath-tools scsitools
 
 sudo tee /etc/multipath.conf <<-'EOF'
@@ -41,7 +43,7 @@ do
     esac
 done
 echo "Install rancher: $rancher";
-if [ $rancher ]
+if [ $rancher -eq "true"]
 then
   docker run -d --restart=unless-stopped -p 80:80 -p 443:443 --privileged rancher/rancher:stable
 fi
